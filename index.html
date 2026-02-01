@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALA - Reading Comprehension</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="sala-header">
+        <div class="header-content">
+            <h1>Shah Abdul Latif Academy <span class="brand-tag">SALA</span></h1>
+            <p class="subtitle">Reading Comprehension Series <span class="separator">|</span> By Safdar Junejo</p>
+            <a href="https://whatsapp.com/channel/0029Vb5tZoH0lwgxaM1Jmr2h" target="_blank" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> Join My WhatsApp Channel
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div id="home-view">
+            <div class="welcome-card">
+                <h2>Select a Practice Passage</h2>
+                <p>These passages are designed according to the IBA Sukkur & STS pattern. Read carefully and answer the 10 questions.</p>
+            </div>
+
+            <div class="passage-grid">
+                <button onclick="loadPassage(0)" class="passage-btn">
+                    <span class="p-icon">📄</span> 
+                    <div class="p-info">
+                        <h3>Passage 1</h3>
+                        <small>Topic: Environmental Science</small>
+                    </div>
+                </button>
+                <button onclick="loadPassage(1)" class="passage-btn">
+                    <span class="p-icon">⚖️</span> 
+                    <div class="p-info">
+                        <h3>Passage 2</h3>
+                        <small>Topic: Economic Systems</small>
+                    </div>
+                </button>
+                <button onclick="loadPassage(2)" class="passage-btn">
+                    <span class="p-icon">🧬</span> 
+                    <div class="p-info">
+                        <h3>Passage 3</h3>
+                        <small>Topic: Biological Evolution</small>
+                    </div>
+                </button>
+                <button onclick="loadPassage(3)" class="passage-btn">
+                    <span class="p-icon">🏛️</span> 
+                    <div class="p-info">
+                        <h3>Passage 4</h3>
+                        <small>Topic: Indus Valley Civilization</small>
+                    </div>
+                </button>
+                <button onclick="loadPassage(4)" class="passage-btn">
+                    <span class="p-icon">🧠</span> 
+                    <div class="p-info">
+                        <h3>Passage 5</h3>
+                        <small>Topic: Human Psychology</small>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div id="quiz-view" class="hidden">
+            <button onclick="goHome()" class="back-btn">← Back to Home</button>
+            
+            <div class="reading-card">
+                <h2 id="passage-title">Passage Title</h2>
+                <div id="passage-text" class="passage-text-content">
+                    </div>
+            </div>
+
+            <form id="quiz-form">
+                <div id="questions-container">
+                    </div>
+                <button type="button" id="submit-btn" onclick="submitQuiz()">Submit Answers</button>
+            </form>
+
+            <div id="result-box" class="result-box hidden">
+                <h3>Your Score: <span id="score">0</span> / 10</h3>
+                <p id="feedback-msg" class="feedback"></p>
+                <div class="action-buttons">
+                    <button onclick="resetQuiz()" class="retry-btn">Try Again</button>
+                    <button onclick="goHome()" class="home-btn-small">Choose Another Passage</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
