@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+:root {
+    --primary: #008080;
+    --dark: #005f5f;
+    --light: #f4f7f6;
+    --text: #333;
+    --accent: #e67e22;
+}
+
+body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(--text); margin: 0; }
+
+/* Header */
+.sala-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 2rem 1rem; text-align: center; }
+.sala-header h1 { margin: 0; font-size: 1.8rem; }
+.brand-tag { background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px; font-size: 0.6em; vertical-align: middle; }
+.subtitle { opacity: 0.9; margin: 10px 0 20px; font-size: 0.9rem; }
+.whatsapp-btn { background: #25D366; color: white; padding: 8px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; }
+
+/* Container */
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.hidden { display: none; }
+
+/* Home Grid */
+.welcome-card { background: white; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.passage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+
+.passage-btn {
+    background: white; border: none; padding: 20px; border-radius: 12px;
+    display: flex; align-items: center; text-align: left; cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
+}
+.passage-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--primary); }
+.p-icon { font-size: 2rem; margin-right: 15px; }
+.p-info h3 { margin: 0; color: var(--primary); font-size: 1.1rem; }
+.p-info small { color: #666; }
+
+/* Reading Section */
+.back-btn { background: none; border: none; color: #666; cursor: pointer; font-size: 1rem; margin-bottom: 15px; }
+.back-btn:hover { color: var(--primary); text-decoration: underline; }
+
+.reading-card { background: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); border-top: 5px solid var(--accent); }
+#passage-title { color: var(--dark); margin-top: 0; }
+.passage-text-content { 
+    font-family: 'Merriweather', serif; /* Better for reading long text */
+    line-height: 1.8; color: #2c3e50; font-size: 1.05rem; 
+    max-height: 400px; overflow-y: auto; /* Scroll if too long */
+    padding-right: 10px; border-bottom: 1px solid #eee;
+}
+
+/* Quiz Section */
+.question-block { background: white; padding: 20px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #ddd; }
+.q-txt { font-weight: 600; margin-bottom: 10px; display: block; }
+.options label { display: block; padding: 8px 12px; margin: 5px 0; background: #f9f9f9; border-radius: 4px; cursor: pointer; transition: 0.2s; }
+.options label:hover { background: #eee; }
+input[type="radio"] { margin-right: 10px; }
+
+#submit-btn { width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; margin-top: 20px; }
+#submit-btn:hover { background: var(--dark); }
+
+/* Result */
+.result-box { background: white; padding: 30px; text-align: center; border-radius: 10px; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.feedback { font-size: 1.2rem; font-weight: bold; margin: 10px 0; }
+.action-buttons button { margin: 5px; padding: 10px 20px; cursor: pointer; border-radius: 5px; border: none; }
+.retry-btn { background: var(--text); color: white; }
+.home-btn-small { background: #ddd; color: #333; }
+
